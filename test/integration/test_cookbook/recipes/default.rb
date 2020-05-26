@@ -1,23 +1,23 @@
 # get a big hash
 hash1 = {
         'golf': 'hotel',
-        'kilo': ['lima', 'mike', 'november'],
+        'kilo': %w(lima mike november),
         'india': {
-                  'juliett': true
+                  'juliett': true,
                  },
         'alpha': {
                   'charlie': 'delta',
                   'bravo': 10,
                  },
-        'echo': 'foxtrot'
+        'echo': 'foxtrot',
        }
 
 hash2 = {
         'golf': 'hotel',
-        'kilo': ['lima', 'mike', 'november'],
+        'kilo': %w(lima mike november),
         'india': {
                   'juliett': true,
-                  'oscar': 14
+                  'oscar': 14,
                  },
         'alpha': {
                   'charlie': 'delta',
