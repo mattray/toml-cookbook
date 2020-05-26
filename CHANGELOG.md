@@ -6,6 +6,7 @@ This file is used to list changes made in each version of the toml cookbook.
 
 Initial release.
 
-- change 0
-- change 1
+# 0.1.1
 
+- Removed extraneous recipe directory
+- Cookstyle cleanups

@@ -1,4 +1,4 @@
-# toml_file
+# toml
 
 Provides custom resource for creating TOML files by passing a hash as the `content`. The `toml_file` resource extends the `file` resource, so it has all of the other properties.
 
