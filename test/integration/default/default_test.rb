@@ -13,7 +13,7 @@ describe file '/tmp/kitchen/cache/test1.toml' do
   its('content') { should match /^charlie = \"delta\"$/ }
   its('content') { should match /^\[india\]$/ }
   its('content') { should match /^juliett = true$/ }
-  end
+end
 
 describe file '/tmp/kitchen/cache/test2.toml' do
   it { should exist }
@@ -27,4 +27,4 @@ describe file '/tmp/kitchen/cache/test2.toml' do
   its('content') { should match /^\[india\]$/ }
   its('content') { should match /^juliett = true$/ }
   its('content') { should match /^oscar = 14$/ }
-  end
+end
