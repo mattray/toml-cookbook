@@ -10,3 +10,7 @@ Initial release.
 
 - Removed extraneous recipe directory
 - Cookstyle cleanups
+
+# 0.2.0
+
+- updated custom resource to account for [breaking Custom Resource change in Chef 16.2](https://discourse.chef.io/t/chef-infra-client-16-2-released/17284)

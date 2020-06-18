@@ -1,4 +1,5 @@
 resource_name :toml_file
+provides :toml_file
 
 # taken from https://docs.chef.io/resources/file/
 property :path, String, name_property: true
