@@ -26,16 +26,12 @@ module Toml
         nested_pairs = []
         simple_pairs = []
         table_array_pairs = []
-        # puts "\n::-#{hash.keys}"
-        # string_keys = hash.keys.collect { |x| x.to_s }.sort # convert everything to string
-        # puts "::+#{string_keys}"
-        # string_keys.keep_if { |x| hash.keys.include?(x) } # if string is in the hash.keys, keep it
-        # puts "::+#{string_keys}"
-        # string_keys = string_keys | hash.keys # Re-add anything not in the sorted
-        # puts "::+#{string_keys}"
 
-        # string_keys.each do |key|
-        hash.keys.each do |key|
+        string_keys = hash.keys.collect(&:to_s).sort # convert everything to string and sort
+        sym_keys = string_keys.collect(&:to_sym) # back to symbols
+        ordered_keys = (sym_keys & hash.keys) | hash.keys # remove syms that weren't stringed
+
+        ordered_keys.each do |key|
           val = hash[key]
           element = [key, val]
 

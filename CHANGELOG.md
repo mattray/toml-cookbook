@@ -15,4 +15,4 @@ Initial release.
 # 0.3.0
 - removed TomlRB dependency
 - refactored to use Habitat cookbook's TOML support
-- fixed sorting
+- fixed sorting and covered dotted strings and => hashes

@@ -37,10 +37,10 @@ hash3 = {
                   "clams": 'oysters',
                  },
         "nine.ten": {
-                  'juliett': "value",
-                  "clams": 'oysters',
-                  'oscar': 14,
-                  "meyer": "14",
+                  'juliett'=> "keys",
+                  "clams": 'shellfish',
+                  'oscar': 25,
+                  "meyer": "25",
                  },
        }
 
