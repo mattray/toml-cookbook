@@ -1,0 +1,3 @@
+AllCops:
+  Exclude:
+    - 'test/integration/test_cookbook/recipes/default.rb'
