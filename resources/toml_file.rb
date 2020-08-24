@@ -14,16 +14,13 @@ property :mode, [String, Integer]
 property :owner, [String, Integer]
 
 action :create do
-  chef_gem 'toml-rb' do
-    compile_time true
-  end
-  require 'toml-rb'
-
-  content = new_resource.content
-  toml_content = TomlRB.dump(content)
+  # puts "CREATE1"
+  # require 'pry'
+  # binding.pry
+  # puts "CREATE2"
 
   file new_resource.path do
-    content toml_content
+    content toml_dump(new_resource.content)
     atomic_update new_resource.atomic_update
     backup new_resource.backup
     checksum new_resource.checksum
@@ -37,16 +34,8 @@ action :create do
 end
 
 action :create_if_missing do
-  chef_gem 'toml-rb' do
-    compile_time true
-  end
-  require 'toml-rb'
-
-  content = new_resource.content
-  toml_content = TomlRB.dump(content)
-
   file new_resource.path do
-    content toml_content
+    content toml_dump(new_resource.content)
     atomic_update new_resource.atomic_update
     backup new_resource.backup
     checksum new_resource.checksum
@@ -80,4 +69,8 @@ action :touch do
     owner new_resource.owner
     action :touch
   end
+end
+
+action_class do
+  include Toml::Toml
 end
