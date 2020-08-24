@@ -23,4 +23,9 @@ suites:
     verifier:
       inspec_tests:
         - test/integration/default
-    attributes:
+  - name: fifteen
+    provisioner:
+      product_version: 15
+    verifier:
+      inspec_tests:
+        - test/integration/default

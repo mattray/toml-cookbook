@@ -16,3 +16,6 @@ Initial release.
 - removed TomlRB dependency
 - refactored to use Habitat cookbook's TOML support
 - fixed sorting and covered dotted strings and => hashes
+
+# 0.3.1
+- Chef 15 support
